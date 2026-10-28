@@ -1,1 +1,115 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AHAD GAME ZONE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">🎮 AHAD <span>GAME ZONE</span></div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#games">Games</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="tag">WELCOME TO AHAD GAME ZONE</p>
+    <h1>PLAY GAMES.<br><span>HAVE FUN!</span></h1>
+    <p>Discover exciting free online games. Play anytime, anywhere!</p>
+    <a href="#games" class="play-btn">PLAY NOW ▶</a>
+  </div>
+</section>
+
+<section class="games-section" id="games">
+  <div class="section-heading">
+    <p>OUR COLLECTION</p>
+    <h2>POPULAR GAMES</h2>
+  </div>
+
+  <div class="search-box">
+    <input id="searchInput" type="text"
+      placeholder="Search your favorite game..."
+      oninput="searchGames()">
+  </div>
+
+  <div class="categories">
+    <button class="active" onclick="filterGames('all',this)">All</button>
+    <button onclick="filterGames('arcade',this)">Arcade</button>
+    <button onclick="filterGames('puzzle',this)">Puzzle</button>
+    <button onclick="filterGames('action',this)">Action</button>
+  </div>
+
+  <div class="game-grid" id="gameGrid">
+
+    <div class="game-card" data-category="arcade">
+      <div class="game-image">🚀</div>
+      <h3>Rocket Challenge</h3>
+      <p>Test your rocket skills!</p>
+      <button onclick="launchGame('rocket')">PLAY GAME</button>
+    </div>
+
+    <div class="game-card" data-category="puzzle">
+      <div class="game-image">🧩</div>
+      <h3>Number Puzzle</h3>
+      <p>Challenge your brain.</p>
+      <button onclick="launchGame('puzzle')">PLAY GAME</button>
+    </div>
+
+    <div class="game-card" data-category="arcade">
+      <div class="game-image">🐍</div>
+      <h3>Snake Game</h3>
+      <p>Enjoy the classic snake.</p>
+      <button onclick="launchGame('snake')">PLAY GAME</button>
+    </div>
+
+    <div class="game-card" data-category="action">
+      <div class="game-image">🎯</div>
+      <h3>Target Shooter</h3>
+      <p>Improve your accuracy.</p>
+      <button onclick="launchGame('target')">PLAY GAME</button>
+    </div>
+
+    <div class="game-card" data-category="puzzle">
+      <div class="game-image">🧠</div>
+      <h3>Memory Match</h3>
+      <p>Test your memory.</p>
+      <button onclick="launchGame('memory')">PLAY GAME</button>
+    </div>
+
+    <div class="game-card" data-category="arcade">
+      <div class="game-image">🏎️</div>
+      <h3>Speed Racing</h3>
+      <p>Feel the racing speed.</p>
+      <button onclick="launchGame('racing')">PLAY GAME</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="game-area" id="gameArea" hidden>
+  <h2 id="gameTitle">Game</h2>
+  <div id="gameContent"></div>
+  <button class="close-btn" onclick="closeGame()">CLOSE GAME</button>
+</section>
+
+<section class="about" id="about">
+  <h2>ABOUT AHAD GAME ZONE</h2>
+  <p>Your gaming destination. Enjoy exciting games and have fun!</p>
+</section>
+
+<footer>
+  <h3>🎮 AHAD GAME ZONE</h3>
+  <p>© 2026 AHAD GAME ZONE. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+    </html>
